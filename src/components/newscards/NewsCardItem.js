@@ -22,7 +22,7 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
 
   return (
 
-    <div ref={elRefs[i]} className={classNames("card large sticky-action news-card", activeArticle === i ? "active-card" : null) }>
+    <div ref={elRefs[i]} className={classNames("card large sticky-action z-depth-3 news-card", activeArticle === i ? "active-card" : null) }>
 
       <a  href={url} target="_blank">
         <div className="card-image">
@@ -31,7 +31,7 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
       </a>
 
       <div className="card-content news-card-content">
-        <div className="news-card-details grey-text ">
+        <div className="news-card-details">
           <p>{(new Date(publishedAt)).toDateString()}</p>
           <p>{source.name}</p>
         </div>
@@ -42,7 +42,7 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
       </div>
     
 
-      <div class="card-reveal">
+      <div className="card-reveal">
         <span className="card-title news-card-title activator">{title}
           <i className="material-icons indigo-text">expand_less</i>
         </span>
@@ -51,7 +51,7 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
 
       <div className="card-action news-card-action">
         <a href={url} className="waves-effect waves-light btn-small news-btn">Learn More</a>
-        <a href={url} className="grey-text">{ i + 1 }</a>
+        <a href={url} className="p-num">{ i + 1 }</a>
       </div>
     </div>
   

@@ -7,14 +7,16 @@ import NewsCards from '../components/newscards/NewsCards'
 const Home = ({ articles, activeArticle }) => {
     if(!articles.length){
         return (
-            <>
-                <InfoCards />
-            </>
+            <div className="page-container">
+                 <InfoCards />
+            </div>
         )
     }
 
     return(
-        <NewsCards articles={articles} activeArticle={activeArticle} />
+        <div className="page-container">
+            <NewsCards articles={articles} activeArticle={activeArticle} />
+        </div>
     )
 }
 

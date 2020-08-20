@@ -7,13 +7,16 @@ import Footer from './components/layout/Footer';
 import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css'; 
 import './App.css'
+import useShow from './useShow';
 
-const alanKey = '95f8bd751100a03c2fd2075d60acd1312e956eca572e1d8b807a3e2338fdd0dc/stage' // key is unique to every project
+
+const alanKey = process.env.REACT_APP_API_KEY  
 
 const App = () => {
 
   const [newsArticles, setNewsArticles] = useState([])
   const [activeArticle, setActiveArticle] = useState(-1)
+  const { showText } = useShow
 
   useEffect(() => {
     //Initialize Materialize JS
@@ -24,26 +27,28 @@ const App = () => {
     alanBtn({
         key: alanKey,
         onCommand: ({ command, articles, number }) => {
-            if(command === 'newHeadlines'){
-              setNewsArticles(articles)
-              setActiveArticle(-1)
-            } else if (command === 'highlight'){
-                setActiveArticle((prevActiveArticle) =>  prevActiveArticle + 1)
-            } else if (command === 'open'){
-              
-              const parsedNumber = number.length > 2 ? wordsToNumbers((number), { fuzzy: true }) : number
-              const article = articles[parsedNumber - 1]
-
-              if (parsedNumber > 20) {
-                alanBtn().playText('Please try that again...');
-              } else if (article) {
+          if(command === 'newHeadlines'){
+            setNewsArticles(articles)
+            setActiveArticle(-1)
+          } 
+          else if (command === 'highlight'){
+            setActiveArticle((prevActiveArticle) =>  prevActiveArticle + 1)
+          } 
+          else if (command === 'open'){
+            const parsedNumber = number.length > 2 ? wordsToNumbers((number), { fuzzy: true }) : number
+            const article = articles[parsedNumber - 1]
+            if (parsedNumber > 20) {
+              alanBtn().playText('Please try that again...');
+            } 
+            else if (article) {
                 window.open(article.url, '_blank');
                 alanBtn().playText('Opening...');
-              } else {
+            } 
+            else {
                 alanBtn().playText('Please try that again...');
-              }
             }
-        }
+          }
+        }, bottom: '30px', right:'100px'
     })
   }, [])
 

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import M from 'materialize-css/dist/js/materialize.min.js'
+import useShow from '../../useShow';
 
 const InfoCardItem = ({ infoCard }) => {
-    const [showText, setShowText] = useState(false);
+   // const [showText, setShowText] = useState(false);
+    const {showText, setShowText} = useShow()
 
     return (
         <div className="card info-card">
@@ -17,10 +19,10 @@ const InfoCardItem = ({ infoCard }) => {
             <div className="card-action info-card-action">
                 <a  href="#" 
                     className="btn-floating btn-small waves-effect waves-light orange tooltipped" 
-                    data-tooltip="Click the Microphone and ask Alan for News with the Suggested Phrase" 
+                    data-tooltip="Ask Alan Microphone for News with the Suggested Phrase" 
                     data-position="right"
-                    onMouseEnter={() => setShowText(!showText)} 
-                    onMouseLeave={() => setShowText(!showText)} >   
+                    onMouseEnter={() => setShowText(true)} 
+                    onMouseLeave={() => setShowText(false)} >   
                         <i className="material-icons">comment</i>
                 </a>
 
