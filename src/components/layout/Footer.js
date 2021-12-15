@@ -3,11 +3,9 @@ import seal from '../../img/alan-seal.png'
 
 const Footer = () => {
     return (
-   
-
-<footer class="page-footer">
-<div className="seal-bottom"><img src={seal} /></div>
-</footer>
+        <footer class="page-footer">
+        <div className="seal-bottom"><img src={seal} /></div>
+        </footer>
     )
 }
 

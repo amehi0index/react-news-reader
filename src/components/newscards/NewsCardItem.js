@@ -2,8 +2,6 @@ import React, { useState, useEffect , createRef } from 'react'
 import classNames from 'classnames'
 
 const NewsCardItem = ({ article, i, activeArticle }) => {
-    
-
   const { description, publishedAt, source, title, url, urlToImage } = article
   const [elRefs, setElRefs] = useState([])
   const scrollToRef = (ref) => window.scroll(0, ref.current.offsetTop - 50)
@@ -17,12 +15,13 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
       if( i === activeArticle && elRefs[activeArticle]){
           scrollToRef(elRefs[activeArticle])
       }
-  },[i, activeArticle, elRefs]) //listen for changes
-
+  },[i, activeArticle, elRefs]) 
 
   return (
 
-    <div ref={elRefs[i]} className={classNames("card large sticky-action z-depth-3 news-card", activeArticle === i ? "active-card" : null) }>
+    <div ref={elRefs[i]} className={ classNames(
+      "card large sticky-action z-depth-3 news-card", 
+      activeArticle === i ? "active-card" : null) }>
 
       <a  href={url} target="_blank">
         <div className="card-image">
@@ -41,7 +40,6 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
         </span>
       </div>
     
-
       <div className="card-reveal">
         <span className="card-title news-card-title activator">{title}
           <i className="material-icons indigo-text">expand_less</i>
@@ -54,7 +52,6 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
         <a href={url} className="p-num">{ i + 1 }</a>
       </div>
     </div>
-  
   )
 }
 export default NewsCardItem

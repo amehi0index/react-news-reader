@@ -3,15 +3,14 @@ import M from 'materialize-css/dist/js/materialize.min.js'
 import useShow from '../../useShow';
 
 const InfoCardItem = ({ infoCard }) => {
-   // const [showText, setShowText] = useState(false);
-    const {showText, setShowText} = useShow()
+    const [showText, setShowText] = useState(false);
 
     return (
         <div className="card info-card">
             <div className="card-content white-text">
                 <span className="card-title info-card-title">{infoCard.title}</span>
                 <span className="info-card-info">
-                        {infoCard.info && infoCard.info.split(', ').map(g => ( //split string, return arr
+                        {infoCard.info && infoCard.info.split(', ').map(g => ( 
                             <span key={g}>{g}<span className="bar">|</span></span> 
                         ))}
                  </span>

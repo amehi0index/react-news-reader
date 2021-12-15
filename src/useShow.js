@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const useShow = () => {
 
-    const [showText, setShowText] = useState(false)
+  const [showText, setShowText] = useState(false)
 
   return {
     showText,

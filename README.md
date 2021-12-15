@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Alan AI News Reader
 
-## Available Scripts
+![Project Image](alan.png)
 
-In the project directory, you can run:
+> News Reader Application built in React and integrated with the Alan Conversational Voice AI Platform.
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Table of Contents
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [Sources](#sources)
+- [License](#license)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+This application integrates a React Application with the Alan Conversational Voice AI Platform to allow a user to hear the news from various outlets/sources based on voice input from the user.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Technologies
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- React: v16.13.1
+- Alan-AI: v1.3.0
+- Materialize-CSS: v1.0.0-rc.2
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## How To Use
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 1. Install Dependencies and Run
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+#npm install
+#npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### 2. Alan AI Integration: https://alan.app/docs/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Sources
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This application is adapted from the Artificial Intelligence React Application Tutorial
+by [ JavaScript Mastery](https://www.youtube.com/c/JavaScriptMastery/search?query=alan%20aiAlan)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This project is licensed under the [MIT License](#LICENSE.txt)
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2021 [Amelia Hill](#https://ameliahill.com)
