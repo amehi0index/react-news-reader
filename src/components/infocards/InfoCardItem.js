@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import M from 'materialize-css/dist/js/materialize.min.js'
-import useShow from '../../useShow';
+//import M from 'materialize-css/dist/js/materialize.min.js'
 
 const InfoCardItem = ({ infoCard }) => {
     const [showText, setShowText] = useState(false);
@@ -16,7 +15,7 @@ const InfoCardItem = ({ infoCard }) => {
                  </span>
             </div>
             <div className="card-action info-card-action">
-                <a  href="#" 
+                <a  href="#!" 
                     className="btn-floating btn-small waves-effect waves-light orange tooltipped" 
                     data-tooltip="Ask Alan Microphone for News with the Suggested Phrase" 
                     data-position="right"
@@ -25,7 +24,7 @@ const InfoCardItem = ({ infoCard }) => {
                         <i className="material-icons">comment</i>
                 </a>
 
-                <a href="#" className={showText ? "info-card-text-highlight" : "info-card-text"}>{infoCard.text}</a>
+                <a href="#!" className={showText ? "info-card-text-highlight" : "info-card-text"}>{infoCard.text}</a>
             </div>
         </div>
     )

@@ -1,5 +1,4 @@
 import React from 'react'
-import seal from '../../img/alan-seal.png'
 
 const Navbar = () => {
     return (

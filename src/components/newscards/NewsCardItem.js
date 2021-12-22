@@ -23,9 +23,9 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
       "card large sticky-action z-depth-3 news-card", 
       activeArticle === i ? "active-card" : null) }>
 
-      <a  href={url} target="_blank">
+      <a  href={url} target="_blank" rel="noopener noreferrer">
         <div className="card-image">
-          <img className ="news-card-img" src={urlToImage}  />
+          <img className ="news-card-img" src={urlToImage}  alt="" />
         </div>
       </a>
 

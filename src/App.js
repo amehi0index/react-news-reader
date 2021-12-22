@@ -7,8 +7,6 @@ import Footer from './components/layout/Footer';
 import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css'; 
 import './App.css'
-import useShow from './useShow';
-
 
 const alanKey = process.env.REACT_APP_API_KEY  
 
@@ -16,7 +14,7 @@ const App = () => {
 
   const [newsArticles, setNewsArticles] = useState([])
   const [activeArticle, setActiveArticle] = useState(-1)
-  const { showText } = useShow
+  //const { showText } = useShow
 
   useEffect(() => {
     //Initialize Materialize JS
