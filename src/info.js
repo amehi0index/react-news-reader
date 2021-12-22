@@ -9,7 +9,7 @@ export default {
         {
             title: 'News by Categories',
             info: 'Business, Entertainment, Health, Science, Sports, Technology', 
-            text: 'Give me the latest Technology news'
+            text: 'Give me the latest Tech news'
         }, 
         {
             title: 'News by Terms', 
