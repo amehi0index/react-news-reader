@@ -19,7 +19,7 @@ export default {
         {
             title: 'News by Sources', 
             info: 'CNN, Wired, BBC News, Time, IGN , Buzzfeed , ABC News', 
-            text: 'Give me the news from CNN',
+            text: 'Show me the news from CNN',
         },
     ]
 }

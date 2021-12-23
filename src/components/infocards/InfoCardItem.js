@@ -17,7 +17,7 @@ const InfoCardItem = ({ infoCard }) => {
             <div className="card-action info-card-action">
                 <a  href="#!" 
                     className="btn-floating btn-small waves-effect waves-light orange tooltipped" 
-                    data-tooltip="Ask Alan Microphone for News with the Suggested Phrase" 
+                    data-tooltip="Ask Microphone for News with Above Phrase" 
                     data-position="right"
                     onMouseEnter={() => setShowText(true)} 
                     onMouseLeave={() => setShowText(false)} >   

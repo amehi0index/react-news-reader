@@ -20,12 +20,12 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
   return (
 
     <div ref={elRefs[i]} className={ classNames(
-      "card large sticky-action z-depth-3 news-card", 
+      "card medium sticky-action z-depth-3 news-card", 
       activeArticle === i ? "active-card" : null) }>
 
       <a  href={url} target="_blank" rel="noopener noreferrer">
         <div className="card-image">
-          <img className ="news-card-img" src={urlToImage}  alt="" />
+          <img src={urlToImage}  alt="" />
         </div>
       </a>
 
@@ -35,7 +35,7 @@ const NewsCardItem = ({ article, i, activeArticle }) => {
           <p>{source.name}</p>
         </div>
         <span className="card-title news-card-title activator">
-         {title}
+         <span>{title}</span>
           <i className="material-icons indigo-text">expand_more</i>
         </span>
       </div>
