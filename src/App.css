@@ -167,11 +167,11 @@ nav {
   font-family: 'Roboto';
 }
 
-.card-img {
+.card-image {
   width: 100%;
-  height: 30% !important;
-  min-height: 30% !important;
-  max-height: 30% !important;
+  height: 45% !important;
+  min-height: 45% !important;
+  max-height: 45% !important;
 }
 
 .card-img img {
@@ -191,6 +191,14 @@ nav {
   text-transform: capitalize;
   font-weight: 600 !important;
   font-size: 16px !important;
+}
+
+.card-title-height {
+  display: inline-block;
+  line-height: 1.6;
+  max-height: 80px;
+  min-height: 80px;
+  text-overflow: ellipsis;
 }
 
 .news-card-action {
