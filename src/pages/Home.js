@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import InfoCards from '../components/infocards/InfoCards'
 import NewsCards from '../components/newscards/NewsCards'
 
-
 const Home = ({ articles, activeArticle }) => {
 
     useEffect(() => {
@@ -12,7 +11,6 @@ const Home = ({ articles, activeArticle }) => {
             document.body.style.overflowY = "scroll"
         }
     }, [articles.length])
-
 
     if(!articles.length){
         return (
