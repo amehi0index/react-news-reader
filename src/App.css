@@ -9,12 +9,45 @@ body {
   height: 100vh;
 }
 
+/*PRELOADER*/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000729;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 4s ease;
+}
+
+.loader-container.finish {
+  opacity: 0;
+  pointer-events: none;
+  /*display: none;*/
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #ffa500;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  transition: opacity 2s ease;
+}
+
 .page-container {
   margin-top: 70px;
   padding-bottom: 70px !important;
 }
 
-/* NAV */
+/*NAV*/
 .alan-logo {
   width: 60px;
   height: 60px;
@@ -239,4 +272,13 @@ nav {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -14,12 +14,15 @@ const App = () => {
 
   const [newsArticles, setNewsArticles] = useState([])
   const [activeArticle, setActiveArticle] = useState(-1)
-  //const { showText } = useShow
+  const loaderContainer = document.querySelector('.loader-container')
 
   useEffect(() => {
+    if (loaderContainer){
+      loaderContainer.classList.add('finish')
+    }
     //Initialize Materialize JS
     M.AutoInit()
-  },[])
+  },[loaderContainer])
 
   useEffect(() => {
     alanBtn({
