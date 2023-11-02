@@ -5,7 +5,7 @@ import NewsCards from '../components/newscards/NewsCards'
 const Home = ({ articles, activeArticle }) => {
 
     useEffect(() => {
-        if(!articles.length){
+        if(!articles){
             document.body.style.overflow = "hidden"
         }else{
             document.body.style.overflowY = "scroll"
